@@ -53,45 +53,43 @@ body {
   z-index: 10;
 }
 
-/* Ad Slots */
+/* Ad Slots - Optimized for AdSense */
 .ad-slot {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #f0f2f5;
-  border: 1px dashed #ccc;
-  margin: 10px;
-  color: #999;
-  font-size: 0.8rem;
-  overflow: hidden;
+  display: block;
+  text-align: center;
+  margin: 20px auto;
+  background: var(--bg-light);
+  border: 1px dashed var(--border-color);
+  overflow: visible;
+  min-height: 50px;
 }
 
 .ad-placeholder {
-  font-weight: 500;
+  padding: 10px;
+  color: var(--text-light);
+  font-size: 0.7rem;
   text-transform: uppercase;
-  letter-spacing: 1px;
 }
 
 .ad-top {
-  height: 90px;
-  margin: 20px auto;
-  width: 728px;
-  max-width: 95%;
+  width: 100%;
+  max-width: 728px;
+  min-height: 90px;
 }
 
 .ad-left,
 .ad-right {
   width: 160px;
-  height: 600px;
+  min-height: 600px;
   position: sticky;
   top: 20px;
 }
 
 .ad-bottom {
-  height: 250px;
-  margin: 40px auto 20px;
   width: 100%;
   max-width: 970px;
+  min-height: 90px;
+  margin-top: 40px;
 }
 
 /* Responsive Ads */

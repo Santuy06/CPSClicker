@@ -2,9 +2,11 @@ import { useState, useRef } from 'react';
 import TimeSelector from './components/TimeSelector';
 import ClickPad from './components/ClickPad';
 import Results from './components/Results';
+import AdSlot from './components/AdSlot';
 import './App.css';
 
 const TIME_OPTIONS = [1, 5, 10, 15, 30, 60, 100];
+const AD_CLIENT_ID = "ca-pub-8631793219925376"; // Updated with your Publisher ID
 
 function App() {
   const [selectedTime, setSelectedTime] = useState(5);
@@ -95,13 +97,21 @@ function App() {
     <div className="app-container">
       {/* Top Ad Slot - Leaderboard */}
       <div className="ad-slot ad-top">
-        <div className="ad-placeholder">Advertisement</div>
+        <AdSlot
+          adClient={AD_CLIENT_ID}
+          adSlot="XXXXXXXXXX" // Ganti dengan Ad Slot ID untuk Top Ad
+          adFormat="horizontal"
+        />
       </div>
 
       <div className="app-main-layout">
         {/* Left Side Ad Slot - Skyscraper */}
         <aside className="ad-slot ad-left">
-          <div className="ad-placeholder">Advertisement</div>
+          <AdSlot
+            adClient={AD_CLIENT_ID}
+            adSlot="XXXXXXXXXX" // Ganti dengan Ad Slot ID untuk Left Ad
+            adFormat="vertical"
+          />
         </aside>
 
         <div className="app-content">
@@ -139,13 +149,21 @@ function App() {
 
           {/* Bottom Ad Slot */}
           <div className="ad-slot ad-bottom">
-            <div className="ad-placeholder">Advertisement</div>
+            <AdSlot
+              adClient={AD_CLIENT_ID}
+              adSlot="XXXXXXXXXX" // Ganti dengan Ad Slot ID untuk Bottom Ad
+              adFormat="auto"
+            />
           </div>
         </div>
 
         {/* Right Side Ad Slot - Skyscraper */}
         <aside className="ad-slot ad-right">
-          <div className="ad-placeholder">Advertisement</div>
+          <AdSlot
+            adClient={AD_CLIENT_ID}
+            adSlot="XXXXXXXXXX" // Ganti dengan Ad Slot ID untuk Right Ad
+            adFormat="vertical"
+          />
         </aside>
       </div>
     </div>
