@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import TimeSelector from './components/TimeSelector';
 import ClickPad from './components/ClickPad';
 import Results from './components/Results';
@@ -166,6 +167,7 @@ function App() {
           />
         </aside>
       </div>
+      <Analytics />
     </div>
   );
 }
