@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #4A90E2;
+  --primary-dark: #357ABD;
+  --bg-white: #FFFFFF;
+  --bg-light: #F8F9FA;
+  --text-dark: #2C3E50;
+  --text-light: #6C757D;
+  --border-color: #E0E0E0;
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
+  --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #F8F9FA 0%, #FFFFFF 100%);
+  color: var(--text-dark);
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #fdfdfd;
+}
+
+.app-main-layout {
+  display: flex;
+  flex: 1;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.app-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background: var(--bg-white);
+  z-index: 10;
+}
+
+/* Ad Slots - Optimized for AdSense */
+.ad-slot {
+  display: block;
+  text-align: center;
+  margin: 20px auto;
+  background: #f8f9fa;
+  border: 1px dashed #dee2e6;
+  overflow: visible;
+  min-height: 50px;
+}
+
+.ad-placeholder {
+  padding: 10px;
+  color: var(--text-light);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+}
+
+.ad-top {
+  width: 100%;
+  max-width: 728px;
+  min-height: 90px;
+}
+
+.ad-middle {
+  width: 100%;
+  max-width: 728px;
+  min-height: 90px;
+  margin: 40px auto;
+}
+
+.ad-left,
+.ad-right {
+  width: 160px;
+  min-height: 600px;
+  position: sticky;
+  top: 20px;
+}
+
+.ad-bottom {
+  width: 100%;
+  max-width: 970px;
+  min-height: 250px;
+  margin-top: 60px;
+}
+
+/* Responsive Ads */
+@media (max-width: 1200px) {
+
+  .ad-left,
+  .ad-right {
+    display: none;
+  }
+}
+
+/* Header */
+.header {
+  text-align: center;
+  padding: 40px 20px 20px;
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #1a202c;
+  margin-bottom: 8px;
+  letter-spacing: -2px;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: #718096;
+  font-weight: 500;
+}
+
+/* Main Content */
+.main-content {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 20px;
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
+/* Buttons */
+.btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  font-family: 'Inter', sans-serif;
+  outline: none;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn-primary {
+  background: var(--primary-color);
+  color: white;
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-primary:hover {
+  background: var(--primary-dark);
+}
+
+.btn-share {
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  background: var(--bg-white);
+  border: 1px solid var(--border-color);
+  color: var(--text-dark);
+}
+
+.btn-share:hover {
+  background: var(--bg-light);
+  border-color: var(--primary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .header {
+    padding: 20px 10px 10px;
+  }
+
+  .main-content {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app {
+    padding: 10px;
+  }
+
+  .title {
+    font-size: 1.75rem;
+  }
+}

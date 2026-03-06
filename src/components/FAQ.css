@@ -1,0 +1,36 @@
+.faq-section {
+    margin-top: 40px;
+    max-width: 1000px;
+    width: 100%;
+    text-align: left;
+}
+
+.faq-section h3 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.faq-item {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+}
+
+.faq-question {
+    color: #4a90e2;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.faq-answer {
+    color: #5d6d7e;
+    line-height: 1.6;
+}

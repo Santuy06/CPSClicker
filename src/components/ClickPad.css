@@ -1,0 +1,156 @@
+.click-pad-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.click-pad {
+    position: relative;
+    width: 100%;
+    min-height: 400px;
+    background: var(--bg-white);
+    border: 3px solid var(--border-color);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+    overflow: hidden;
+    transition: var(--transition);
+    box-shadow: var(--shadow-md);
+}
+
+.click-pad:hover {
+    border-color: var(--primary-color);
+    box-shadow: var(--shadow-lg);
+}
+
+.click-pad:active {
+    transform: scale(0.98);
+}
+
+.click-pad-content {
+    text-align: center;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.instruction-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.instruction {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+}
+
+.time-display {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+.click-count {
+    font-size: 5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.click-label {
+    font-size: 1.5rem;
+    color: var(--text-light);
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.timer {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    padding: 12px 24px;
+    background: var(--bg-light);
+    border-radius: 8px;
+    display: inline-block;
+}
+
+/* Ripple Effect */
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(74, 144, 226, 0.3);
+    width: 20px;
+    height: 20px;
+    transform: translate(-50%, -50%);
+    animation: ripple-animation 0.6s ease-out;
+    pointer-events: none;
+}
+
+@keyframes ripple-animation {
+    0% {
+        width: 20px;
+        height: 20px;
+        opacity: 1;
+    }
+
+    100% {
+        width: 200px;
+        height: 200px;
+        opacity: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .click-pad {
+        min-height: 350px;
+    }
+
+    .click-count {
+        font-size: 4rem;
+    }
+
+    .instruction {
+        font-size: 1.5rem;
+    }
+
+    .instruction-icon {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .click-pad {
+        min-height: 300px;
+    }
+
+    .click-count {
+        font-size: 3.5rem;
+    }
+
+    .instruction {
+        font-size: 1.3rem;
+    }
+
+    .timer {
+        font-size: 1.5rem;
+        padding: 10px 20px;
+    }
+}
